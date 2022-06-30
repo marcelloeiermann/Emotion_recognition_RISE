@@ -40,6 +40,9 @@ def tensor_imshow(inp, title=None, **kwargs):
 def get_class_name(c):
     labels = np.loadtxt('synset_words.txt', str, delimiter='\t')
     return ' '.join(labels[c].split(',')[0].split()[1:])
+def get_class_name_emotion(c):
+    labels  = ["angry", "disgust", "fear", "happy", "neutral", "sad", "surprise"]
+    return labels[c]
 
 
 # Image preprocessing function
